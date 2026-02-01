@@ -1,0 +1,27 @@
+{
+  "name": "pubkeyauth",
+  "version": "0.0.1",
+  "description": "A modular client-side library for asymmetric key generation and signature-based authentication.",
+  "keywords": [
+    "publickey",
+    "asymmetrickey",
+    "indexeddb",
+    "authentication",
+    "crypto"
+  ],
+  "homepage": "https://github.com/reasonset/pubkeyauth.js#readme",
+  "bugs": {
+    "url": "https://github.com/reasonset/pubkeyauth.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reasonset/pubkeyauth.js.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Masaki Haruka",
+  "type": "module",
+  "main": "pubkeyauth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

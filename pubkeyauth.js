@@ -74,7 +74,8 @@ class PubKeyAuth {
    */
   async renew() {
     const keys = await this.#generateKeys()
-    return await this.saveKeys(keys)
+    await this.saveKeys(keys)
+    return keys
   }
 
   /**

@@ -21,6 +21,9 @@
   "author": "Masaki Haruka",
   "type": "module",
   "main": "pubkeyauth.js",
+  "files": [
+    "pubkeyauth.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }

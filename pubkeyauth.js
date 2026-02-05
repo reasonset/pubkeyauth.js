@@ -74,7 +74,7 @@ class PubKeyAuth {
    */
   async renew() {
     const keys = await this.#generateKeys()
-    await this.saveKeys(keys)
+    return await this.saveKeys(keys)
   }
 
   /**
@@ -82,7 +82,7 @@ class PubKeyAuth {
    * @param {string} token 
    * @returns {Response} API response
    */
-  async auth(token) {
+  async auth(token, challenge) {
     const signobj = await this.sign(token)
     if (!this.endpoint) {
       throw "API endpoint is not defined."
@@ -92,7 +92,7 @@ class PubKeyAuth {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(signobj)
+      body: JSON.stringify({token: challenge, ...signobj})
     })
 
     return response

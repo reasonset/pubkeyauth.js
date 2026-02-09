@@ -80,8 +80,9 @@ class PubKeyAuth {
 
   /**
    * Sign to token and POST to endpoint
-   * @param {string} token 
-   * @returns {Response} API response
+   * @param {string} token Challenge secret
+   * @param {string} challenge Challenge token
+   * @returns {Promise<Response>} API response
    */
   async auth(token, challenge) {
     const signobj = await this.sign(token)
